@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 4px 16px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+}
+
+.container .title {
+    background: linear-gradient(45deg, #80eee3, #fd7454);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.container .image-block .image-desc {
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .image-block .image-link img {
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.container .image-block .image-link img:hover {
+    opacity: 0.7;
+}
+
+.container .image-block .image-text {
+    font-weight: 500;
+    color: #5578bc;
+    animation: blinking 1s ease-in-out infinite;
+}
+
+@keyframes blinking {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.container table th, 
+.container table td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.container table th:nth-child(1), 
+.container table td:nth-child(1) {
+    background-color: #facd56;
+}
+
+.container table th:nth-child(2), 
+.container table td:nth-child(2) {
+    background-color: #ff7559;
+}
+
+.container table th:nth-child(3), 
+.container table td:nth-child(3) {
+    background-color: #e8fffe;
+}
+
+.container .info-page {
+    color: white;
+    padding: 6px 8px;
+    background-color: #acef71;
+    text-decoration: none;
+    display: block;
+    max-width: max-content;
+    margin: 12px auto;
+    border-radius: 4px;
+}
+
+.container .info-page:hover {
+    background-color: #95ee47;
+}
+
+@media screen and (max-width: 600px) {
+    .container .title {
+        text-align: center;
+    }
+
+    .container .image-block .image-link img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .container table {
+        width: 100%;
+    }
+}
